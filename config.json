@@ -1,0 +1,9 @@
+{
+    "api_key": "cb20caed-0f1f-4372-9c9f-dee8ce61a197",
+    "dataLoader.py": "/root/dataloader/DataLoader/dataLoader/dataloader.py",
+
+    "api_submit_entry": "http://localhost:9099/services/Camicroscope_DataLoader/DataLoader/submit/json",
+    "image_directory": "/data/images",
+    "api_get_md5_for_image": "http://localhost:9099/services/Camicroscope_DataLoader/DataLoader/query/getMD5forImage",
+    "api_subject_id_exists": "http://localhost:9099/services/Camicroscope_DataLoader/DataLoader/query/getImagesForSubjectId"
+}
