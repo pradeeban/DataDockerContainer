@@ -108,7 +108,7 @@
           "description": "Gets MPP for give IID    "
         },
         "getMetaDataForCaseID": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"sample-id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0,  }\n    }\n}       ",
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"sample-id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0  }\n    }\n}        ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -124,9 +124,9 @@
             "outputFormat": "JSON"
           },
           "name": "getMetaDataForCaseID",
-          "timeCreated": "Thu May 12 12:16:45 EDT 2016",
+          "timeCreated": "Mon May 16 22:41:03 EDT 2016",
           "createdBy": "admin",
-          "description": "Retrieves file location for given case ID"
+          "description": "Retrieves file location for given case ID "
         }
       },
       "deleteEndpoints": {},

@@ -64,7 +64,7 @@ ADD http://imaging.cci.emory.edu/wiki/download/attachments/4915228/bindaas-dist-
 WORKDIR /root/bindaas
 RUN tar -xvf bindaas.tar.gz && rm bindaas.tar.gz
 COPY Camicroscope_DataLoader.project /root/bindaas/bin/projects/Camicroscope_DataLoader.project
-COPY Camicroscope_Annotations.project /root/bindaas/bin/projects/Camicroscope_Annottaions.project
+COPY Camicroscope_Annotations.project /root/bindaas/bin/projects/Camicroscope_Annotations.project
 COPY bindaas.config.json /root/bindaas/bin/
 
 EXPOSE 9099
