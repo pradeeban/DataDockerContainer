@@ -108,12 +108,12 @@
           "description": "Gets MPP for give IID    "
         },
         "getMetaDataForCaseID": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"sample-id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0  }\n    }\n}        ",
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"case_id\": \"$case_id$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0  }\n    }\n}         ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
-            "TCGAId": {
-              "name": "TCGAId",
+            "case_id": {
+              "name": "case_id",
               "required": true,
               "defaultValue": "",
               "description": ""
@@ -124,12 +124,23 @@
             "outputFormat": "JSON"
           },
           "name": "getMetaDataForCaseID",
-          "timeCreated": "Mon May 16 22:41:03 EDT 2016",
+          "timeCreated": "Thu Jun 09 15:12:59 EDT 2016",
           "createdBy": "admin",
-          "description": "Retrieves file location for given case ID "
+          "description": "Retrieves file location for given case ID  "
         }
       },
-      "deleteEndpoints": {},
+      "deleteEndpoints": {
+        "DeleteAll": {
+          "queryTemplate": "{\n\t\"_operation\" : \"delete\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : {  }\n\t\t\t\t\t\t}\n}\n",
+          "tags": [],
+          "bindVariables": {},
+          "stage": "UNVERIFIED",
+          "name": "DeleteAll",
+          "timeCreated": "Thu Jun 09 15:09:59 EDT 2016",
+          "createdBy": "admin",
+          "description": "Delete all data"
+        }
+      },
       "submitEndpoints": {
         "csvFile": {
           "type": "MULTIPART",
