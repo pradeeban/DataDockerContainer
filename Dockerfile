@@ -20,8 +20,7 @@ RUN apt-get install -q -y libcurl3
 RUN mkdir /root/src
 
 WORKDIR /root/src
-COPY jre-6u45-linux-x64.bin jre
-RUN "./jre"
+RUN sudo apt-get install -y openjdk-8-jre
 # Add java to path
 
 ENV PATH /root/src/jre1.6.0_45/bin:$PATH
