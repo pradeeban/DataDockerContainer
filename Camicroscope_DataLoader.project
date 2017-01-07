@@ -24,7 +24,7 @@
           "description": "Gets all the data"
         },
         "getImagesForSubjectId": {
-          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \u0027sample-id\u0027 : \u0027$Subject_ID$\u0027 } ,\n\t\t\t\t\t\t\t\"fields\" :{ \u0027_id\u0027 : 0, \"file-location\": 1}\n\t\t\t\t\t\t}\n}\n  ",
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \u0027case_id\u0027 : \u0027$Subject_ID$\u0027 } ,\n\t\t\t\t\t\t\t\"fields\" :{ \u0027_id\u0027 : 0, \"file-location\": 1}\n\t\t\t\t\t\t}\n}\n  ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -66,7 +66,7 @@
           "description": "Fetches MD5 for image give the filelocation  "
         },
         "getFileLocationByIID": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"sample-id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0, \u0027file-location\u0027: 1 }\n    }\n}      ",
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"case_id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0, \u0027file-location\u0027: 1 }\n    }\n}      ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -87,7 +87,7 @@
           "description": "Retrieves file location for given sample ID   "
         },
         "getMPPByIID": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"sample-id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0, \u0027mpp-x\u0027: 1, \u0027mpp-y\u0027: 1 }\n    }\n}         ",
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"case_id\": \"$TCGAId$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0, \u0027mpp-x\u0027: 1, \u0027mpp-y\u0027: 1 }\n    }\n}         ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
