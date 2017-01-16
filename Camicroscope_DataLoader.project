@@ -4,8 +4,8 @@
       "dataSource": {
         "host": "127.0.0.1",
         "port": "27017",
-        "db": "Camicroscope_DataLoader",
-        "collection": "DataLoader",
+        "db": "Camicroscope",
+        "collection": "images",
         "initialize": true
       },
       "queryEndpoints": {
