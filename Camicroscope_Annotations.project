@@ -4,7 +4,7 @@
       "dataSource": {
         "host": "127.0.0.1",
         "port": "27017",
-        "db": "Camicroscope",
+        "db": "quip",
         "collection": "objects",
         "initialize": true
       },
@@ -197,7 +197,7 @@
       "dataSource": {
         "host": "127.0.0.1",
         "port": "27017",
-        "db": "Camicroscope",
+        "db": "quip",
         "collection": "metadata",
         "initialize": true
       },
