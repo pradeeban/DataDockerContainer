@@ -202,8 +202,22 @@
         "initialize": true
       },
       "queryEndpoints": {
+        "getAll": {
+          "queryTemplate": "{}",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {},
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "getAll",
+          "timeCreated": "Tue Jan 24 18:23:33 UTC 2017",
+          "createdBy": "admin",
+          "description": ""
+        },
         "MarkupsAvilableForImage": {
-          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"caseid\" : \"$TCGAId$\"} ,\n      \"fields\" : { \"_id\" : 0, \"title\":1,\"analysis_execution_id\":1}\n   }\n}    ",
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \u0027image.case_id\u0027 : \u0027$TCGAId$\u0027 }\n\t\t\t\t\t\t}\n}\n    ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -219,9 +233,9 @@
             "outputFormat": "JSON"
           },
           "name": "MarkupsAvilableForImage",
-          "timeCreated": "Wed May 18 17:38:02 EDT 2016",
+          "timeCreated": "Tue Jan 24 18:32:58 UTC 2017",
           "createdBy": "admin",
-          "description": "List of completed algorithms for given CaseID   "
+          "description": "List of completed algorithms for given CaseID      "
         }
       },
       "deleteEndpoints": {},
