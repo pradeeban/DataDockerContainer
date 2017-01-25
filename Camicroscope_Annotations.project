@@ -142,6 +142,53 @@
           "timeCreated": "Thu May 12 13:19:04 EDT 2016",
           "createdBy": "admin",
           "description": "Deletes All the data"
+        },
+        "deleteMultipleMarkups": {
+          "queryTemplate": "{\n\t\"_operation\" : \"delete\" ,\n\t\"_operation_args\" : {\n\t\t\"query\" : {\n\t\t\t\"provenance.image.case_id\": \"$CaseId$\", \n                         x : { \u0027$gte\u0027:$x1$, \u0027$lte\u0027:$x2$},\n                         y : { \u0027$gte\u0027:$y1$, \u0027$lte\u0027:$y2$},\n                         \"provenance.analysis.execution_id\":  \"$execution_id$\"\n\t\t}\n}\n}",
+          "tags": [],
+          "bindVariables": {
+            "CaseId": {
+              "name": "CaseId",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "x1": {
+              "name": "x1",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "x2": {
+              "name": "x2",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "y1": {
+              "name": "y1",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "y2": {
+              "name": "y2",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "execution_id": {
+              "name": "execution_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "name": "deleteMultipleMarkups",
+          "timeCreated": "Wed Jan 25 19:29:12 UTC 2017",
+          "createdBy": "admin",
+          "description": "delete multiple markups"
         }
       },
       "submitEndpoints": {
