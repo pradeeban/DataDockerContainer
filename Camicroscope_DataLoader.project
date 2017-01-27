@@ -9,20 +9,6 @@
         "initialize": true
       },
       "queryEndpoints": {
-        "getAll": {
-          "queryTemplate": "{}",
-          "metaData": {},
-          "tags": [],
-          "bindVariables": {},
-          "stage": "UNVERIFIED",
-          "outputFormat": {
-            "outputFormat": "JSON"
-          },
-          "name": "getAll",
-          "timeCreated": "Tue Apr 26 15:46:46 EDT 2016",
-          "createdBy": "admin",
-          "description": "Gets all the data"
-        },
         "getImagesForSubjectId": {
           "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \u0027case_id\u0027 : \u0027$Subject_ID$\u0027 } ,\n\t\t\t\t\t\t\t\"fields\" :{ \u0027_id\u0027 : 0, \"file-location\": 1}\n\t\t\t\t\t\t}\n}\n  ",
           "metaData": {},
@@ -127,6 +113,20 @@
           "timeCreated": "Thu Jun 09 15:12:59 EDT 2016",
           "createdBy": "admin",
           "description": "Retrieves file location for given case ID  "
+        },
+        "getAll": {
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : {  } ,\n\t\t\t\t\t\t\t\"fields\" :{ \u0027_id\u0027 : 0, \u0027case_id\u0027: 1, \u0027width\u0027: 1, \u0027height\u0027: 1 },\n\t\t\t\t\t\t\t\"limit\" : 1000\n\t\t\t\t\t\t}\n}\n ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {},
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "getAll",
+          "timeCreated": "Fri Jan 27 18:49:17 UTC 2017",
+          "createdBy": "admin",
+          "description": "Gets all the data  "
         }
       },
       "deleteEndpoints": {
