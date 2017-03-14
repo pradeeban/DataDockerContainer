@@ -2,7 +2,6 @@
 
 * Installs Mongo
 * Installs Bindaas
-* Install DataLoader.py and DataLoader API
 * Uses `.project` files for Bindaas
 
 
