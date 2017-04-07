@@ -37,12 +37,16 @@ RUN apt-get install -y nodejs npm
 #
 
 # Install MongoDB.
-RUN \
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
-  echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list && \
-  apt-get update && \
-  apt-get install -y mongodb-org && \
-  rm -rf /var/lib/apt/lists/*
+
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+
+RUN echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list
+
+RUN apt-get update
+
+RUN mkdir -p /data/db
+
+RUN apt-get install -y adduser mongodb-org-server mongodb-org-shell
 
 # Define mountable directories.
 VOLUME ["/data/db"]
