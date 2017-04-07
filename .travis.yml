@@ -9,4 +9,4 @@ before_install:
 - docker build -t camicroscope_data . 
 - docker run -itd camicroscope_data
 script:
-- docker ps | grep -q viewer
+- docker ps | grep -q data

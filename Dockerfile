@@ -26,27 +26,13 @@ RUN  apt-get install -y default-jdk
 
 ENV PATH /root/src/jre1.6.0_45/bin:$PATH
  
-# Node
-RUN apt-get install -y nodejs npm
-
-# Mongo 
-#
-# MongoDB Dockerfile
-#
-# https://github.com/dockerfile/mongodb
-#
-
 # Install MongoDB.
-
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
-
 RUN echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list
-
 RUN apt-get update
-
 RUN mkdir -p /data/db
-
 RUN apt-get install -y adduser mongodb-org-server mongodb-org-shell
+
 
 # Define mountable directories.
 VOLUME ["/data/db"]
