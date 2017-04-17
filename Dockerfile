@@ -4,7 +4,7 @@
 
 # VERSION               0.3.1
 
-FROM     ubuntu:14.04
+FROM     ubuntu:16.04
 MAINTAINER Ganesh Iyer "lastlegion@gmail.com"
 
 # build with
@@ -26,23 +26,13 @@ RUN  apt-get install -y default-jdk
 
 ENV PATH /root/src/jre1.6.0_45/bin:$PATH
  
-# Node
-RUN apt-get install -y nodejs npm
-
-# Mongo 
-#
-# MongoDB Dockerfile
-#
-# https://github.com/dockerfile/mongodb
-#
-
 # Install MongoDB.
-RUN \
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
-  echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > /etc/apt/sources.list.d/mongodb.list && \
-  apt-get update && \
-  apt-get install -y mongodb-org && \
-  rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y upstart
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+RUN echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+RUN  apt-get update
+RUN apt-get install -y mongodb-org
+
 
 # Define mountable directories.
 VOLUME ["/data/db"]
@@ -63,8 +53,9 @@ RUN mkdir -p /root/bindaas
 ADD http://imaging.cci.emory.edu/wiki/download/attachments/4915228/bindaas-dist-2.0.2-201603312230-min.tar.gz?version=1&modificationDate=1459806174096&api=v2 /root/bindaas/bindaas.tar.gz
 WORKDIR /root/bindaas
 RUN tar -xvf bindaas.tar.gz && rm bindaas.tar.gz
-COPY Camicroscope_DataLoader.project /root/bindaas/bin/projects/Camicroscope_DataLoader.project
-COPY Camicroscope_Annotations.project /root/bindaas/bin/projects/Camicroscope_Annotations.project
+COPY projects /root/bindaas/bin/projects
+#COPY Camicroscope_DataLoader.project /root/bindaas/bin/projects/Camicroscope_DataLoader.project
+#COPY Camicroscope_Annotations.project /root/bindaas/bin/projects/Camicroscope_Annotations.project
 COPY bindaas.config.json /root/bindaas/bin/
 
 EXPOSE 9099
