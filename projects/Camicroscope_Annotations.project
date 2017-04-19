@@ -272,6 +272,27 @@
           "timeCreated": "Thu Jan 26 13:38:02 UTC 2017",
           "createdBy": "admin",
           "description": "Gets ROI for a point "
+        },
+        "getPropertiesForMarkupClone": {
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t        \"query\" : { \"_id\": {\"$oid\" : $id$ }},\n\t\t\t\t\t\t\t\"fields\" :{ \u0027properties\u0027:1, \u0027provenance\u0027: 1 ,\u0027algorithm\u0027 : 1,\u0027geometry.coordinates\u0027:1}\n\t\t\t\t\t\t}\n}\n    ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "id": {
+              "name": "id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "getPropertiesForMarkupClone",
+          "timeCreated": "Thu Jan 12 15:26:18 EST 2017",
+          "createdBy": "admin",
+          "description": "Gets the data filled by the user in the form while creating the markup    "
         }
       },
       "deleteEndpoints": {
@@ -399,6 +420,53 @@
           "stage": "UNVERIFIED",
           "name": "deleteAnnotationWithinRectangle",
           "timeCreated": "Tue Nov 01 11:37:15 EDT 2016",
+          "createdBy": "admin",
+          "description": ""
+        }
+        ,"deleteAnnotationWithinRectangleClone": {
+          "queryTemplate": "{\n\t\"_operation\" : \"delete\" ,\n\t\"_operation_args\" : {\n\t\t\t      \"query\" : {\"provenance.image.case_id\":$case_id$,                                                                                \"provenance.analysis.execution_id\":$execution_id$,\n                                         x : { \u0027$gt\u0027:$x1$, \u0027$lt\u0027:$x2$},\n                                         y : { \u0027$gt\u0027:$y1$, \u0027$lt\u0027:$y2$}\n                                        }\n\t\t\t    }\n}      ",
+          "tags": [],
+          "bindVariables": {
+            "case_id": {
+              "name": "case_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "execution_id": {
+              "name": "execution_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "x1": {
+              "name": "x1",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "x2": {
+              "name": "x2",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "y1": {
+              "name": "y1",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "y2": {
+              "name": "y2",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "name": "deleteAnnotationWithinRectangleClone",
+          "timeCreated": "Fri Mar 31 13:42:14 EDT 2017",
           "createdBy": "admin",
           "description": ""
         }
