@@ -74,7 +74,6 @@
           "createdBy": "admin",
           "description": "Get single markup  "
         },
-        
         "getMultipleMarkups": {
           "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027: {\n\t\t\t\"provenance.image.case_id\": \"$CaseId$\", \n                         x : { \u0027$gte\u0027:$x1$, \u0027$lte\u0027:$x2$},\n                         y : { \u0027$gte\u0027:$y1$, \u0027$lte\u0027:$y2$},\n\t\t\t\"footprint\": {\"$gte\": $footprint$},\n                         \"provenance.analysis.execution_id\":  {\u0027$in\u0027:    \n                                  $algorithms$\n                         }\n         },\n        \u0027fields\u0027: {\n                        \u0027provenance\u0027:1, \u0027footprint\u0027: 1,\n\t\t\t\u0027geometry\u0027: 1,\n \t\t   \t\u0027_id\u0027: 1\n\t}\n    }\n}            \n    ",
           "metaData": {},
@@ -131,8 +130,8 @@
           "timeCreated": "Wed Jan 25 22:05:39 UTC 2017",
           "createdBy": "admin",
           "description": "Gets markups from multiple algorithms    "
-        },  
-         "getMultipleMarkupsWithAttr": {
+        },
+        "getMultipleMarkupsWithAttr": {
           "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027: {\n\t\t\t\"provenance.image.case_id\": \"$CaseId$\", \n\t\t\t\"footprint\": {\"$gte\": $footprint$},\n                         x : { \u0027$gte\u0027:$x1$, \u0027$lte\u0027:$x2$},\n                         y : { \u0027$gte\u0027:$y1$, \u0027$lte\u0027:$y2$},\n                         \"provenance.analysis.execution_id\":  {\u0027$in\u0027:    \n                                  $algorithms$\n                         }\n         },\n        \u0027fields\u0027: {\n                        \u0027provenance.image.case_id\u0027:1, \n\t\t\t\u0027provenance.analysis.execution_id\u0027: 1,\n\t\t\t\u0027footprint\u0027: 1,\n\t\t\t\u0027geometry\u0027: 1,\n                         \u0027properties\u0027:1,\n                         \u0027$attribute$\u0027: 1,\n \t\t   \t\u0027_id\u0027: 1\n\t}\n    }\n}            ",
           "metaData": {},
           "tags": [],
@@ -194,7 +193,7 @@
           "timeCreated": "Tue Dec 06 14:10:26 EST 2016",
           "createdBy": "admin",
           "description": "Get metrics with markups"
-      	},              
+        },
         "getMultipleMarkupsClone": {
           "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027: {\n\t\t\t\"provenance.image.case_id\": \"$CaseId$\", \n\t\t\t\"footprint\": {\"$gte\": $footprint$},\n                         x : { \u0027$gte\u0027:$x1$, \u0027$lte\u0027:$x2$},\n                         y : { \u0027$gte\u0027:$y1$, \u0027$lte\u0027:$y2$},\n                         \"provenance.analysis.execution_id\":  {\u0027$in\u0027:    \n                                  $algorithms$\n                         }\n         },\n        \u0027fields\u0027: {\n                        \u0027provenance.image.case_id\u0027:1, \n\t\t\t\u0027provenance.analysis.execution_id\u0027: 1,\n                        \u0027algorithm\u0027:1,\n                        \u0027color\u0027:1,\n                       \t\u0027footprint\u0027: 1,\n\t\t\t\u0027geometry\u0027: 1,\n \t\t   \t\u0027_id\u0027: 1\n\t}\n    }\n}            \n\n            ",
           "metaData": {},
@@ -251,7 +250,7 @@
           "timeCreated": "Tue Oct 25 15:05:11 EDT 2016",
           "createdBy": "admin",
           "description": "    "
-        },        
+        },
         "getROI": {
           "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t        \"query\" : { \"_id\": {\"$oid\" : $id$ }},\n\t\t\t\t\t\t\t\"fields\" :{ \u0027properties\u0027:1, \u0027provenance\u0027: 1 ,\u0027algorithm\u0027 : 1,\u0027geometry.coordinates\u0027:1}\n\t\t\t\t\t\t}\n}\n     ",
           "metaData": {},
@@ -370,7 +369,7 @@
           "createdBy": "admin",
           "description": "Delete annotation by Mongo object ID"
         },
-		    "deleteAnnotationWithinRectangle": {
+        "deleteAnnotationWithinRectangle": {
           "queryTemplate": "{\n\t\"_operation\" : \"delete\" ,\n\t\"_operation_args\" : {\n\t\t\t      \"query\" : {\"provenance.image.case_id\":$case_id$,\n                                         \"provenance.image.subject_id\":$subject_id$,\n                                         \"provenance.analysis.execution_id\":$execution_id$,\n                                         x : { \u0027$gt\u0027:$x1$, \u0027$lt\u0027:$x2$},\n                                         y : { \u0027$gt\u0027:$y1$, \u0027$lt\u0027:$y2$}\n                                        }\n\t\t\t    }\n} ",
           "tags": [],
           "bindVariables": {
@@ -422,8 +421,8 @@
           "timeCreated": "Tue Nov 01 11:37:15 EDT 2016",
           "createdBy": "admin",
           "description": ""
-        }
-        ,"deleteAnnotationWithinRectangleClone": {
+        },
+        "deleteAnnotationWithinRectangleClone": {
           "queryTemplate": "{\n\t\"_operation\" : \"delete\" ,\n\t\"_operation_args\" : {\n\t\t\t      \"query\" : {\"provenance.image.case_id\":$case_id$,                                                                                \"provenance.analysis.execution_id\":$execution_id$,\n                                         x : { \u0027$gt\u0027:$x1$, \u0027$lt\u0027:$x2$},\n                                         y : { \u0027$gt\u0027:$y1$, \u0027$lt\u0027:$y2$}\n                                        }\n\t\t\t    }\n}      ",
           "tags": [],
           "bindVariables": {
@@ -565,7 +564,25 @@
           "description": "List of completed algorithms for given CaseID      "
         }
       },
-      "deleteEndpoints": {},
+      "deleteEndpoints": {
+        "deleteExecutionId": {
+          "queryTemplate": "{\n\t\"_operation\" : \"delete\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \u0027provenance.analysis_execution_id\u0027 : \u0027$execution_id$\u0027 }\n\t\t\t\t\t\t}\n}\n",
+          "tags": [],
+          "bindVariables": {
+            "execution_id": {
+              "name": "execution_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "name": "deleteExecutionId",
+          "timeCreated": "Thu Apr 20 10:14:17 EDT 2017",
+          "createdBy": "admin",
+          "description": "deletes a given execution id"
+        }
+      },
       "submitEndpoints": {
         "csvFile": {
           "type": "MULTIPART",
