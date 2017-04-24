@@ -4,3 +4,5 @@ mongod --config /etc/mongod.conf &
 sh startup.sh &
 #mongod
 while true; do sleep 1000; done
+#preload caMicroscope Template document
+mongo < loadCamicroscopeTemplate.js
