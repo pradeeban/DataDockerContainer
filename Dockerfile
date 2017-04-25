@@ -57,6 +57,7 @@ COPY projects /root/bindaas/bin/projects
 #COPY Camicroscope_DataLoader.project /root/bindaas/bin/projects/Camicroscope_DataLoader.project
 #COPY Camicroscope_Annotations.project /root/bindaas/bin/projects/Camicroscope_Annotations.project
 COPY bindaas.config.json /root/bindaas/bin/
+COPY trusted-applications.config.json /root/bindaas/bin/trusted-applications.config.json
 
 EXPOSE 9099
 #EXPOSE 8080
