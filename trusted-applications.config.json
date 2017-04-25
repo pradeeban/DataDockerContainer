@@ -1,0 +1,15 @@
+{
+  "trustedApplications": [
+    {
+      "applicationId": "demo-id",
+      "applicationKey": "demo-secret-key",
+      "name": "Demo Application"
+    },
+    { "applicationId": "camicSignup",
+      "applicationKey": "9002eaf56-90a5-4257-8665-6341a5f77107",
+      "name": "caMic Signup App" 
+    }
+  ]
+}
+
+
