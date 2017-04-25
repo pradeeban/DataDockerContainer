@@ -1,3 +1,5 @@
+print("-- start script here --");
+
 use caMicroscope_Templates;
 
 var AnnotationTemplate_records = db.AnnotationTemplate.find().count();
@@ -28,6 +30,8 @@ db.AnnotationTemplate.insert({
     }
  })
 }
+
+print("-- end of  script  --");
 
 
 
