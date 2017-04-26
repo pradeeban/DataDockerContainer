@@ -69,8 +69,3 @@ COPY /loadCamicroscopeTemplate.js /root/bindaas/bin/loadCamicroscopeTemplate.js
 COPY mongod.conf /etc/mongod.conf
 
 CMD ["sh", "run.sh"]
-
-#pre-load Camicroscope Template document
-WORKDIR /root/bindaas/bin
-CMD["sh", "mongo < /root/bindaas/bin/loadCamicroscopeTemplate.js"]
-
