@@ -7,10 +7,12 @@ while true; do sleep 1000; done
 
 #pre-load Camicroscope Template document
 runingMongod=$(ps -a |grep mongod)
-echo ${#runingMongod}
+#echo ${#runingMongod}
 tmplength=${#runingMongod}
-if [ $tmplength -gt 0 ] ; 
-   then  echo "mongod is runing." && 
-      mongo < /root/bindaas/bin/loadCamicroscopeTemplate.js
-   else  echo "mongod is NOT runing."    
-fi
+while [ $tmplength -eq 0 ] ; 
+   do  echo "mongod is not runing." && 
+       sleep 1000 && 
+       runingMongod=$(ps -a |grep mongod) &&
+       tmplength=${#runingMongod}       
+done
+mongo < /root/bindaas/bin/loadCamicroscopeTemplate.js
