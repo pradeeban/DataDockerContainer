@@ -63,5 +63,9 @@ EXPOSE 9099
 #EXPOSE 8080
 WORKDIR /root/bindaas/bin
 COPY /run.sh /root/bindaas/bin/run.sh
-CMD ["sh", "run.sh"]
+#pre-load Camicroscope Template document
+COPY /loadCamicroscopeTemplate.js /root/bindaas/bin/loadCamicroscopeTemplate.js
 
+COPY mongod.conf /etc/mongod.conf
+
+CMD ["sh", "run.sh"]
