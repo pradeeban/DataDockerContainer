@@ -62,10 +62,14 @@ COPY trusted-applications.config.json /root/bindaas/bin/trusted-applications.con
 EXPOSE 9099
 #EXPOSE 8080
 WORKDIR /root/bindaas/bin
-COPY /run.sh /root/bindaas/bin/run.sh
+
 #pre-load Camicroscope Template document
 COPY /loadCamicroscopeTemplate.js /root/bindaas/bin/loadCamicroscopeTemplate.js
 
 COPY mongod.conf /etc/mongod.conf
+WORKDIR /root/
+COPY scripts/db_index.js /root/scripts/db_index.js
+WORKDIR /root/scripts
+COPY /run.sh /root/scripts/run.sh
 
 CMD ["sh", "run.sh"]
