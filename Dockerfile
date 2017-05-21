@@ -71,6 +71,9 @@ COPY /run.sh /root/bindaas/bin/run.sh
 #pre-load Camicroscope Template document
 COPY /loadCamicroscopeTemplate.js /root/bindaas/bin/loadCamicroscopeTemplate.js
 
+#pre-load admin credential document
+COPY /load_admin_info.js /root/bindaas/bin/load_admin_info.js
+
 COPY mongod.conf /etc/mongod.conf
 #WORKDIR /root/
 
