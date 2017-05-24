@@ -7,7 +7,7 @@ if(admin_records == 0){
   db.userInfo.insert({ 
       "userType" : "admin", 
       "username" : "admin", 
-      "password" : "quip2017"
+      "password" : "$1$JvoSPkuO$koIXFbLOxXkS4qjfPkChc1"
  })
 }
 print("-- end of  script  --");
