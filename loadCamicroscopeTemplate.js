@@ -6,7 +6,9 @@ db.AnnotationTemplate.insert({
     "_id" : ObjectId("5789471e80e00235a16436a3"), 
     "region" : {
         "enum" : [
-            "Good Segment"
+            "Good Segmentation",
+            "Over Segmentation",
+            "Under Segmentation"
         ], 
         "title" : "Region:", 
         "type" : "string"
