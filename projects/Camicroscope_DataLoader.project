@@ -127,6 +127,27 @@
           "timeCreated": "Fri Jan 27 18:49:17 UTC 2017",
           "createdBy": "admin",
           "description": "Gets all the data  "
+        },
+        "getImageInfoByCaseID": {
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027:{\"case_id\": \"$case_id$\"},\n        \u0027fields\u0027: {\u0027_id\u0027:0  }\n    }\n}          ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "case_id": {
+              "name": "case_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "getImageInfoByCaseID",
+          "timeCreated": "Tue Jun 13 15:25:59 EDT 2017",
+          "createdBy": "admin",
+          "description": "Retrieves image info for given case ID   "
         }
       },
       "deleteEndpoints": {
