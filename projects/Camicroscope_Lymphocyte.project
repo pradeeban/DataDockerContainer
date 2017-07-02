@@ -23,8 +23,29 @@
           "createdBy": "admin",
           "description": "Gets all lymphocyte heatmap weights and users"
         },
+        "getLymphocytesByCaseId": {
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\"query\" : { \u0027case_id\u0027 : \u0027$case_id$\u0027 }, \"fields\" :{ \u0027_id\u0027 : 0 }}\n}\n    ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "case_id": {
+              "name": "case_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "getLymphocytesByCaseId",
+          "timeCreated": "Fri Jun 30 10:26:58 EDT 2017",
+          "createdBy": "admin",
+          "description": "Gets usernames and lymphocyte heatmap weights by case_id    "
+        },
         "getLymphocytes": {
-          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t \"query\" : { \u0027case_id\u0027 : \u0027$case_id$\u0027, \u0027username\u0027: \u0027$username$\u0027 }\n\t}\n}\n ",
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t \"query\" : { \u0027case_id\u0027 : \u0027$case_id$\u0027, \u0027username\u0027: \u0027$username$\u0027 }, \"fields\" :{ \u0027_id\u0027 : 0 }\n\t}\n}\n   ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -46,30 +67,9 @@
             "outputFormat": "JSON"
           },
           "name": "getLymphocytes",
-          "timeCreated": "Sat Jun 10 17:00:45 EDT 2017",
+          "timeCreated": "Fri Jun 30 10:48:19 EDT 2017",
           "createdBy": "admin",
-          "description": "Gets lymphocyte heatmap weights given case_id, username "
-        },
-        "getLymphocytesByCaseId": {
-          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\"query\" : { \u0027case_id\u0027 : \u0027$case_id$\u0027 }}\n}\n   ",
-          "metaData": {},
-          "tags": [],
-          "bindVariables": {
-            "case_id": {
-              "name": "case_id",
-              "required": true,
-              "defaultValue": "",
-              "description": ""
-            }
-          },
-          "stage": "UNVERIFIED",
-          "outputFormat": {
-            "outputFormat": "JSON"
-          },
-          "name": "getLymphocytesByCaseId",
-          "timeCreated": "Sat Jun 10 17:14:05 EDT 2017",
-          "createdBy": "admin",
-          "description": "Gets usernames and lymphocyte heatmap weights by case_id   "
+          "description": "Gets lymphocyte heatmap weights given case_id, username   "
         }
       },
       "deleteEndpoints": {},
@@ -146,7 +146,7 @@
           "description": "Gets all lymphocyte users"
         },
         "getLymphSuperusers": {
-          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : { \"query\" : { \u0027role\u0027 : \u0027$lymph_superuser$\u0027 }}\n}     ",
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : { \"query\" : { \u0027role\u0027 : \u0027$lymph_superuser$\u0027 }, \"fields\" :{ \u0027_id\u0027 : 0 }}\n}      ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -162,12 +162,12 @@
             "outputFormat": "JSON"
           },
           "name": "getLymphSuperusers",
-          "timeCreated": "Sat Jun 10 17:16:41 EDT 2017",
+          "timeCreated": "Fri Jun 30 10:28:07 EDT 2017",
           "createdBy": "admin",
-          "description": "Gets caMic lymphocyte superusers  "
+          "description": "Gets caMic lymphocyte superusers   "
         },
         "getUserByEmail": {
-          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\"query\" : { \u0027email\u0027 : \u0027$email$\u0027 }}\n}      ",
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\"query\" : { \u0027email\u0027 : \u0027$email$\u0027 }, \"fields\" :{ \u0027_id\u0027 : 0 }}\n}       ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -183,9 +183,9 @@
             "outputFormat": "JSON"
           },
           "name": "getUserByEmail",
-          "timeCreated": "Sat Jun 10 17:17:19 EDT 2017",
+          "timeCreated": "Fri Jun 30 10:28:39 EDT 2017",
           "createdBy": "admin",
-          "description": "Gets an user info by email address   "
+          "description": "Gets an user info by email address    "
         }
       },
       "deleteEndpoints": {
