@@ -205,6 +205,29 @@
           "timeCreated": "Sat Jun 10 17:18:00 EDT 2017",
           "createdBy": "admin",
           "description": ""
+        },
+        "deleteLymphSuperuser": {
+          "queryTemplate": "{\n\t\"_operation\" : \"delete\" ,\n\t\"_operation_args\" : {\"query\" : { \u0027email\u0027 : \u0027$email$\u0027,  \u0027role\u0027 : \u0027$role$\u0027 }}\n}  ",
+          "tags": [],
+          "bindVariables": {
+            "email": {
+              "name": "email",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "role": {
+              "name": "role",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "name": "deleteLymphSuperuser",
+          "timeCreated": "Wed Jul 05 17:48:57 EDT 2017",
+          "createdBy": "admin",
+          "description": ""
         }
       },
       "submitEndpoints": {
