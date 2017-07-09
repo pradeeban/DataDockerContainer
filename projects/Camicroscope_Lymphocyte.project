@@ -186,6 +186,33 @@
           "timeCreated": "Fri Jun 30 10:28:39 EDT 2017",
           "createdBy": "admin",
           "description": "Gets an user info by email address    "
+        },
+        "getUserByEmailAndRole": {
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t \"query\" : { \u0027email\u0027 : \u0027$email$\u0027, \u0027role\u0027: \u0027$role$\u0027 }, \"fields\" :{ \u0027_id\u0027 : 0 }\n\t}\n}",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "email": {
+              "name": "email",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "role": {
+              "name": "role",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "getUserByEmailAndRole",
+          "timeCreated": "Sun Jul 09 12:09:38 EDT 2017",
+          "createdBy": "admin",
+          "description": "Gets a Lymphocyte App user info given email address and role"
         }
       },
       "deleteEndpoints": {
