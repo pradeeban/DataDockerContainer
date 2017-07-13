@@ -351,7 +351,7 @@
           "description": ""
         },
         "getAnnotationWithinRectangle": {
-          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \"provenance.image.case_id\":$case_id$,\n                                         \"provenance.image.subject_id\":$subject_id$,\n                                         \"provenance.analysis.execution_id\":$execution_id$,\n                                         x : { \u0027$gt\u0027:$x1$, \u0027$lt\u0027:$x2$},\n                                         y : { \u0027$gt\u0027:$y1$, \u0027$lt\u0027:$y2$} }  } \n\t\t\t\t\t\t}\n}",
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \"provenance.image.case_id\":\"$case_id$\",\n                                         \"provenance.image.subject_id\":\"$subject_id$\",\n                                         \"provenance.analysis.execution_id\":$execution_id$,\n                                         x : { \u0027$gt\u0027:$x1$, \u0027$lt\u0027:$x2$},\n                                         y : { \u0027$gt\u0027:$y1$, \u0027$lt\u0027:$y2$} }  } \n\t\t\t\t\t\t}\n}",
           "metaData": {},
           "tags": [],
           "bindVariables": {
