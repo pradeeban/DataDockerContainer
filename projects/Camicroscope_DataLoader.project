@@ -202,7 +202,53 @@
           "timeCreated": "Thu Jun 09 15:09:59 EDT 2016",
           "createdBy": "admin",
           "description": "Delete all data"
-        }
+        },
+        "imageStatusUpdate": {
+          "queryTemplate": "{\n\t\"_operation\" : \"update\" ,\n\t\"_operation_args\" : {\n\t\t\t\t        \t\"query\" : { \u0027case_id\u0027 : \u0027$case_id$\u0027 } ,\n\t\t\t\t\t\t\"update\": {$set: {\"status\":\"$status$\"} }\n\t\t\t\t\t}\n}  ",
+          "tags": [],
+          "bindVariables": {
+            "case_id": {
+              "name": "case_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "status": {
+              "name": "status",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "name": "imageStatusUpdate",
+          "timeCreated": "Mon Jan 15 16:51:25 EST 2018",
+          "createdBy": "admin",
+          "description": ""
+        },
+        "imageAssignTo": {
+          "queryTemplate": "{\n\t\"_operation\" : \"update\" ,\n\t\"_operation_args\" : {\n\t\t\t\t        \t\"query\" : { \u0027case_id\u0027 : \u0027$case_id$\u0027 } ,\n\t\t\t\t\t\t\"update\": {$set: {\"assign_to\":\"$assign_to$\"} }\n\t\t\t\t\t}\n}  ",
+          "tags": [],
+          "bindVariables": {
+            "case_id": {
+              "name": "case_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "status": {
+              "name": "assign_to",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "name": "imageAssignTo",
+          "timeCreated": "Wed Jan 17 17:08:34 EST 2018",
+          "createdBy": "admin",
+          "description": ""
+        } 
       },
       "submitEndpoints": {
         "csvFile": {
