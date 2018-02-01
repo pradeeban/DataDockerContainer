@@ -85,6 +85,20 @@
           "createdBy": "admin",
           "description": ""
         },
+        "findUser": {
+          "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \u0027userType\u0027 : \u0027user\u0027} ,\n\t\t\t\t\t\t\t\"fields\" :{ \u0027_id\u0027 : 0 }\n\t\t\t\t\t\t}\n}\n ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {},
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "findUser",
+          "timeCreated": "Fri May 19 15:04:52 EDT 2017",
+          "createdBy": "admin",
+          "description": ""
+        },
         "findAllBindaasUsers": {
           "queryTemplate": "{\n\t\"_operation\" : \"find\" ,\n\t\"_operation_args\" : { \"query\" : { \u0027category\u0027:\u0027bindaas_user\u0027 } ,\n\t\t\t\t\t\t\t\"fields\" :{ \u0027_id\u0027 : 0 }\n                                       }\n}\n  ",
           "metaData": {},
