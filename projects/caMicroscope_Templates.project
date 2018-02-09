@@ -38,8 +38,7 @@
           "createdBy": "admin",
           "description": "retrieve annotation template  "
         }
-      },
-	  
+      },	  
       "deleteEndpoints": {},
       "submitEndpoints": {
         "csvFile": {
@@ -82,8 +81,7 @@
           "createdBy": "admin",
           "description": ""
         }
-      },
-	  
+      },	  
       "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
       "providerVersion": 1,
       "name": "AnnotationTemplate",
