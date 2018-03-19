@@ -43,8 +43,8 @@ WORKDIR /data
 # Expose ports.
 #   - 27017: process
 #   - 28017: http
-EXPOSE 27017
-EXPOSE 28017
+#EXPOSE 27017
+#EXPOSE 28017
 
 
 # Bindaas
@@ -59,7 +59,7 @@ COPY projects /root/bindaas/bin/projects
 COPY bindaas.config.json /root/bindaas/bin/
 COPY trusted-applications.config.json /root/bindaas/bin/trusted-applications.config.json
 
-EXPOSE 9099
+#EXPOSE 9099
 #EXPOSE 8080
 WORKDIR /root/bindaas/bin
 COPY scripts/db_index.js /root/bindaas/bin/db_index.js
