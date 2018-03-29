@@ -79,7 +79,7 @@
           "description": "         "
         },
         "PatientDetails": {
-          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"patientAccountNumber\":\"$patientAccountNumber$\" },\n      \"fields\" :{ \"_id\" : 0, bedIdentifier:1, patientAccountNumber:1, Sepsis_score:1, Sepsis_top_causes:1, VitalSign:1, Time:1, lastName:1, firstName:1, Mortality_Score:1}\n   }\n}           ",
+          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"patientAccountNumber\":\"$patientAccountNumber$\" },\n      \"fields\" :{ \"_id\" : 0, bedIdentifier:1, patientAccountNumber:1, Sepsis_score:1, Sepsis_top_causes:1, VitalSign:1, Time:1, lastName:1, firstName:1, Mortality_Score:1,Threshold_Time:1}\n   }\n}           ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
