@@ -52,7 +52,7 @@
           "description": "  "
         },
         "AllPatientsAboveThreshold": {
-          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"Time\":\"$Time$\", \"Sepsis_score\" : { $gte:$SepsisThreshold$} },\n      \"fields\" :{ \"_id\" : 0, patientAccountNumber:1, bedIdentifier:1, Sepsis_score:1, Sepsis_top_causes:1, Time:1, firstName:1, lastName:1 }\n   }\n}         ",
+          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"Time\":\"$Time$\", \"Sepsis_score\" : { $gte:$SepsisThreshold$} },\n      \"fields\" :{ \"_id\" : 0, patientAccountNumber:1, bedIdentifier:1, Sepsis_score:1, Sepsis_top_causes:1, Time:1, firstName:1, lastName:1,Threashold_Time:1 }\n   }\n}         ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
