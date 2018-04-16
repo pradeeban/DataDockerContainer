@@ -10,29 +10,15 @@
       },
 	  
       "queryEndpoints": {
-        "retrieveTemplate": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027: {\n\n\t\t},\n        \u0027fields\u0027: {\n \t\t   \t\u0027_id\u0027: 0\n\t\t}\n    }\n}           ",
-          "metaData": {},
-          "tags": [],
-          "bindVariables": {},
-          "stage": "UNVERIFIED",
-          "outputFormat": {
-            "outputFormat": "JSON"
-          },
-          "name": "retrieveTemplate",
-          "timeCreated": "Fri Jul 15 13:47:34 EDT 2016",
-          "createdBy": "admin",
-          "description": "Retrieve annotation template "
-        },
-	"retrieveTemplateByName": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027: { \u0027name\u0027 : \u0027$app_name$\u0027 },\n        \u0027fields\u0027: {\n \t\t   \t\u0027_id\u0027: 0,\n                        \u0027secret\u0027:0,\n                        \u0027name\u0027:0\n\t\t}\n    }\n}        ",
+       "retrieveTemplate": {
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027: { \u0027name\u0027 : \u0027$app_name$\u0027 },\n        \u0027fields\u0027: {\n \t\t   \t\u0027_id\u0027: 0,\n                        \u0027secret\u0027:0,\n                        \u0027name\u0027:0\n\t\t}\n    }\n}         ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
             "app_name": {
               "name": "app_name",
-              "required": true,
-              "defaultValue": "",
+              "required": false,
+              "defaultValue": "segment_curation",
               "description": "application name"
             }
           },
@@ -40,11 +26,11 @@
           "outputFormat": {
             "outputFormat": "JSON"
           },
-          "name": "retrieveTemplateByName",
-          "timeCreated": "Mon Apr 02 12:49:06 EDT 2018",
+          "name": "retrieveTemplate",
+          "timeCreated": "Fri Apr 13 16:54:34 EDT 2018",
           "createdBy": "admin",
-          "description": "retrieve annotation template     "
-        }        
+          "description": "retrieve annotation template      "
+        }
       },
 	  
       "deleteEndpoints": {},
