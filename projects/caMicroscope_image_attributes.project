@@ -1,37 +1,30 @@
 {
   "profiles": {
-    "AnnotationTemplate": {
+    "ImageAttributes": {
       "dataSource": {
         "host": "127.0.0.1",
         "port": "27017",
-        "db": "caMicroscope_Templates",
-        "collection": "AnnotationTemplate",
+        "db": "quip",
+        "collection": "image_attributes",
         "initialize": true
       },
 	  
       "queryEndpoints": {
-       "retrieveTemplate": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027: { \u0027name\u0027 : \u0027$app_name$\u0027 },\n        \u0027fields\u0027: {\n \t\t   \t\u0027_id\u0027: 0,\n                        \u0027secret\u0027:0,\n                        \u0027name\u0027:0\n\t\t}\n    }\n}         ",
+       "findAll": {
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: \n    {\n        \u0027query\u0027: {\t\t},\n        \u0027fields\u0027: {\n \t\t   \t\u0027_id\u0027: 0\n\t\t   }\n    }\n}     ",
           "metaData": {},
           "tags": [],
-          "bindVariables": {
-            "app_name": {
-              "name": "app_name",
-              "required": false,
-              "defaultValue": "segment_curation",
-              "description": "application name"
-            }
-          },
+          "bindVariables": {},
           "stage": "UNVERIFIED",
           "outputFormat": {
             "outputFormat": "JSON"
           },
-          "name": "retrieveTemplate",
-          "timeCreated": "Fri Apr 13 16:54:34 EDT 2018",
+          "name": "findAll",
+          "timeCreated": "Wed Apr 04 17:41:22 EDT 2018",
           "createdBy": "admin",
-          "description": "retrieve annotation template      "
+          "description": ""
         }
-      },
+     },
 	  
       "deleteEndpoints": {},
       "submitEndpoints": {
@@ -79,15 +72,15 @@
 	  
       "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
       "providerVersion": 1,
-      "name": "AnnotationTemplate",
-      "timeCreated": "Fri Jul 15 13:45:49 EDT 2016",
+      "name": "ImageAttributes",
+      "timeCreated": "Mon April 2 13:45:49 EDT 2018",
       "createdBy": "admin",
-      "description": "Templates for generating human annotations"
+      "description": "Image Attributes for SEER project"
     }
   },
   "params": {},
-  "name": "caMicroscope_Templates",
-  "timeCreated": "Fri Jul 15 13:43:37 EDT 2016",
+  "name": "caMicroscope_image_attributes",
+  "timeCreated": "Mon April 2 13:43:37 EDT 2018",
   "createdBy": "admin",
-  "description": "Templates for annotations etc."
+  "description": "Image Attributes for SEER project"
 }
