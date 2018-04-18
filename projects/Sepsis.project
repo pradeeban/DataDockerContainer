@@ -112,7 +112,7 @@
           "description": "  "
         },
         "PatientDetailsNoTime": {
-          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"patientAccountNumber\":\"$patientAccountNumber$\" },\n      \"fields\" :{ \"_id\" : 0, bedIdentifier:1, patientAccountNumber:1, Sepsis_score:1, Sepsis_top_causes:1, VitalSign:1, Time:1, lastName:1, firstName:1, Mortality_Score:1,Threshold_Time:1}\n   }\n}                ",
+          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"patientAccountNumber\":\"$patientAccountNumber$\" },\n      \"fields\" :{ \"_id\" : 0, bedIdentifier:1, patientAccountNumber:1, Sepsis_score:1, Sepsis_top_causes:1, Observations:1, Time:1, lastName:1, firstName:1, Mortality_Score:1,Threshold_Time:1}\n   }\n}                ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -133,7 +133,7 @@
           "description": "         "
         },
         "PatientDetails": {
-          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"patientAccountNumber\":\"$patientAccountNumber$\",\n\"Time\": { \u0027$gte\u0027:$T1$, \u0027$lte\u0027:$T2$} },\n      \"fields\" :{ \"_id\" : 0, bedIdentifier:1, patientAccountNumber:1, Sepsis_score:1, Sepsis_top_causes:1, VitalSign:1, Time:1, lastName:1, firstName:1, Mortality_Score:1,Threshold_Time:1}\n   }\n}                    ",
+          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"patientAccountNumber\":\"$patientAccountNumber$\",\n\"Time\": { \u0027$gte\u0027:$T1$, \u0027$lte\u0027:$T2$} },\n      \"fields\" :{ \"_id\" : 0, bedIdentifier:1, patientAccountNumber:1, Sepsis_score:1, Sepsis_top_causes:1, Observations:1, Time:1, lastName:1, firstName:1, Mortality_Score:1,Threshold_Time:1}\n   }\n}                    ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -166,7 +166,7 @@
           "description": "             "
         },
         "TopCauses": {
-          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"Time\": { \u0027$gte\u0027:$T1$, \u0027$lte\u0027:$T2$}, \"patientAccountNumber\":\"$patientAccountNumber$\" },\n      \"fields\" :{ \"_id\" : 0, bedIdentifier:1, patientAccountNumber:1, Sepsis_score:1, VitalSign.$Cause1$:1, VitalSign.$Cause2$:1, Time:1}\n   }\n}              ",
+          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"Time\": { \u0027$gte\u0027:$T1$, \u0027$lte\u0027:$T2$}, \"patientAccountNumber\":\"$patientAccountNumber$\" },\n      \"fields\" :{ \"_id\" : 0, bedIdentifier:1, patientAccountNumber:1, Sepsis_score:1, Observations.$Cause1$:1, Observations.$Cause2$:1, Time:1}\n   }\n}              ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
