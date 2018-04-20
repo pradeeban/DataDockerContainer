@@ -5,12 +5,12 @@
         "host": "127.0.0.1",
         "port": "27017",
         "db": "quip",
-        "collection": "objects",
+        "collection": "metadata",
         "initialize": true
       },
       "queryEndpoints": {
         "getTileLocation": {
-          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: {\n        \u0027query\u0027: {\n            \"provenance.image.case_id\": \"$CaseId$\",\n            \"provenance.analysis.execution_id\": {\n                \u0027$in\u0027: $algorithms$\n            },\n            \"type\" : \"Tile\"\n        },\n        \u0027fields\u0027: {\n            \"provenance.image.case_id\": 1,\n            \"provenance.analysis.execution_id\": 1,\n            \"provenance.analysis.source\": 1,\n            \u0027tile-location\u0027: 1,\n            \u0027type\u0027: 1,\n            \u0027geometry\u0027: 1,\n            \u0027_id\u0027: 1\n        }\n    }\n}  ",
+          "queryTemplate": "{\n    \u0027_operation\u0027: \u0027find\u0027,\n    \u0027_operation_args\u0027: {\n        \u0027query\u0027: {\n            \"image.case_id\": \"$CaseId$\",\n            \"provenance.analysis_execution_id\": { \u0027$in\u0027: $algorithms$ }\n        },\n        \u0027fields\u0027: {\n            \"image.case_id\": 1,\n            \"provenance.analysis_execution_id\": 1,\n            \"tile-location\": 1,\n            \"tile_name\": 1,\n            \"_id\": 1\n        }\n    }\n}  ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -32,9 +32,9 @@
             "outputFormat": "JSON"
           },
           "name": "getTileLocation",
-          "timeCreated": "Wed Jan 17 12:37:23 EST 2018",
+          "timeCreated": "Sun Mar 04 15:35:39 EST 2018",
           "createdBy": "admin",
-          "description": "segmentation overlays "
+          "description": "segmentation overlays        "
         }
       },
       "deleteEndpoints": {},
@@ -83,7 +83,7 @@
       "providerId": "edu.emory.cci.bindaas.datasource.provider.mongodb.MongoDBProvider",
       "providerVersion": 1,
       "name": "Tiles",
-      "timeCreated": "Thu Jan 11 09:57:41 EST 2018",
+      "timeCreated": "Mon Feb 19 13:23:00 EST 2018",
       "createdBy": "admin",
       "description": "Pre-generated segmentation tiles for WSI overlay."
     }
