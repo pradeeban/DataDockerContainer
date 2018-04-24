@@ -112,6 +112,20 @@
           "timeCreated": "Sat May 20 21:56:20 EDT 2017",
           "createdBy": "admin",
           "description": "find all users  "
+        },
+        "findSuperUserCount": {
+          "queryTemplate": "{\n\t\"_operation\" : \"count\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t\t\t\"query\" : { \u0027userType\u0027 : \u0027superUser\u0027 } \n\t\t\t\t\t}\n}\n",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {},
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "findSuperUserCount",
+          "timeCreated": "Mon Apr 23 16:31:13 EDT 2018",
+          "createdBy": "admin",
+          "description": ""
         }
       },
       "deleteEndpoints": {
