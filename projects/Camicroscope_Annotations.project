@@ -739,6 +739,33 @@
           "timeCreated": "Tue Jan 24 18:32:58 UTC 2017",
           "createdBy": "admin",
           "description": "List of completed algorithms for given CaseID      "
+        },
+        "findCompositeDatasetCount": {
+          "queryTemplate": "{\n\t\"_operation\" : \"count\" ,\n\t\"_operation_args\" : {\n\t\t\t\t\t \"query\" : { \u0027image.case_id\u0027 : \u0027$case_id$\u0027,                            \t\t\t\t\t\t\t\t\t\t\u0027provenance.analysis_execution_id\u0027:\u0027$execution_id$\u0027}\n\t\t\t\t\t\t}\n} ",
+          "metaData": {},
+          "tags": [],
+          "bindVariables": {
+            "case_id": {
+              "name": "case_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "execution_id": {
+              "name": "execution_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "outputFormat": {
+            "outputFormat": "JSON"
+          },
+          "name": "findCompositeDatasetCount",
+          "timeCreated": "Thu Apr 26 17:11:15 EDT 2018",
+          "createdBy": "admin",
+          "description": " "
         }
       },
       "deleteEndpoints": {
