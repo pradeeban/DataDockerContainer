@@ -248,6 +248,52 @@
           "timeCreated": "Wed Jan 17 17:08:34 EST 2018",
           "createdBy": "admin",
           "description": ""
+        } ,
+       "imageIsProcessingUpdate": {
+          "queryTemplate": "{\n\t\"_operation\" : \"update\" ,\n\t\"_operation_args\" : {\n\t\t\t\t        \t\"query\" : { \u0027case_id\u0027 : \u0027$case_id$\u0027 } ,\n\t\t\t\t\t\t\"update\": {$set: {\"is_processing\":\"$is_processing$\"} }\n\t\t\t\t\t}\n}  ",
+          "tags": [],
+          "bindVariables": {
+            "case_id": {
+              "name": "case_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "is_processing": {
+              "name": "is_processing",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "name": "imageIsProcessingUpdate",
+          "timeCreated": "Mon Jan 15 16:51:25 EST 2018",
+          "createdBy": "admin",
+          "description": ""
+        },
+        "imageIsCuratedUpdate": {
+          "queryTemplate": "{\n\t\"_operation\" : \"update\" ,\n\t\"_operation_args\" : {\n\t\t\t\t        \t\"query\" : { \u0027case_id\u0027 : \u0027$case_id$\u0027 } ,\n\t\t\t\t\t\t\"update\": {$set: {\"is_curated\":\"$is_curated$\"} }\n\t\t\t\t\t}\n}  ",
+          "tags": [],
+          "bindVariables": {
+            "case_id": {
+              "name": "case_id",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            },
+            "is_curated": {
+              "name": "is_curated",
+              "required": true,
+              "defaultValue": "",
+              "description": ""
+            }
+          },
+          "stage": "UNVERIFIED",
+          "name": "imageIsCuratedUpdate",
+          "timeCreated": "Mon Jan 15 16:51:25 EST 2018",
+          "createdBy": "admin",
+          "description": ""
         } 
       },
       "submitEndpoints": {
