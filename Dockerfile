@@ -76,7 +76,7 @@ RUN chown 1002:1002 /root/bindaas/bin && \
 RUN chown 1002:1002 ./ && \
     chmod 744 ./
     
-RUN groupadd --gid 1002 fatemeh && \
+RUN addgroup --gid 1002 fatemeh && \
     useradd --uid 1002 --gid 1002 fatemeh
 USER fatemeh
 
