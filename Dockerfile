@@ -4,11 +4,17 @@ MAINTAINER Ganesh Iyer "lastlegion@gmail.com"
 # build with
 #  sudo docker build --rm=true -t="repo/imgname" .
 
+RUN addgroup --gid 1002 fatemeh && \
+    useradd --uid 1002 --gid 1002 fatemeh
+USER fatemeh
+
+
 ### update
 RUN apt-get -q update
 RUN apt-get -q -y upgrade
 RUN apt-get -q -y dist-upgrade
 RUN apt-get install -q -y libcurl3 
+
 
 # Java
 RUN mkdir /root/src
