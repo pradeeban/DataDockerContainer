@@ -31,10 +31,6 @@ RUN  apt-get install -y default-jdk
 # Add java to path
 
 ENV PATH /root/src/jre1.6.0_45/bin:$PATH
-
-
-RUN chown 1002:1002 /root/src/jre1.6.0_45/bin:$PATH && \
-    chmod 744 /root/src/jre1.6.0_45/bin:$PATH
     
     
 # Install MongoDB.
