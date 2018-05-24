@@ -4,9 +4,6 @@ MAINTAINER Ganesh Iyer "lastlegion@gmail.com"
 # build with
 #  sudo docker build --rm=true -t="repo/imgname" .
 
-RUN addgroup --gid 1002 fatemeh && \
-    useradd --uid 1002 --gid 1002 fatemeh
-USER fatemeh
 
 
 ### update
@@ -15,6 +12,9 @@ RUN apt-get -q -y upgrade
 RUN apt-get -q -y dist-upgrade
 RUN apt-get install -q -y libcurl3 
 
+RUN addgroup --gid 1002 fatemeh && \
+    useradd --uid 1002 --gid 1002 fatemeh
+USER fatemeh
 
 # Java
 RUN mkdir /root/src
@@ -25,7 +25,7 @@ RUN  apt-get install -y default-jdk
 # Add java to path
 
 ENV PATH /root/src/jre1.6.0_45/bin:$PATH
- 
+USER root
 # Install MongoDB.
 RUN apt-get install -y upstart
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
@@ -33,7 +33,7 @@ RUN echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiver
 RUN  apt-get update
 RUN apt-get install -y mongodb-org
 
-
+USER fatemeh
 # Define mountable directories.
 VOLUME ["/data/db"]
 
@@ -49,6 +49,7 @@ WORKDIR /data
 
 # Bindaas
 RUN mkdir -p /root/bindaas
+
 #COPY bindaas.tar.gz /root/bindaas/
 ADD http://imaging.cci.emory.edu/wiki/download/attachments/4915228/bindaas-dist-2.0.2-201603312230-min.tar.gz?version=1&modificationDate=1459806174096&api=v2 /root/bindaas/bindaas.tar.gz
 WORKDIR /root/bindaas
