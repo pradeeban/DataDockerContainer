@@ -23,12 +23,20 @@ RUN chown 1002:1002 /root/src && \
     chmod 744 /root/src
 
 WORKDIR /root/src
+
+
+    
 RUN  apt-get install -y default-jdk
 #RUN sudo apt-get install -y openjdk-8-jre
 # Add java to path
 
 ENV PATH /root/src/jre1.6.0_45/bin:$PATH
 
+
+RUN chown 1002:1002 /root/src/jre1.6.0_45/bin:$PATH && \
+    chmod 744 /root/src/jre1.6.0_45/bin:$PATH
+    
+    
 # Install MongoDB.
 RUN apt-get install -y upstart
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
