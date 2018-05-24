@@ -70,18 +70,7 @@ COPY /load_admin_info.js /root/bindaas/bin/load_admin_info.js
 
 COPY mongod.conf /etc/mongod.conf
 
-RUN chown 1002:1002 /root/bindaas/bin -R && \
-    chmod -R 744 /root/bindaas/bin
-
-RUN chown 1002:1002 ./ -R && \
-    chmod -R 744 ./
-    
-RUN addgroup --gid 1002 fatemeh && \
-    useradd --uid 1002 --gid 1002 fatemeh
-USER fatemeh
-
 WORKDIR /root/bindaas/bin
 
-#WORKDIR /root/
 
 CMD ["sh", "run.sh"]
