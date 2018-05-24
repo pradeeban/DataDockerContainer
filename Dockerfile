@@ -129,9 +129,11 @@ WORKDIR /root/bindaas/bin
 
 RUN chown -R 1002:1002 /root/bindaas/bin && \
     chmod -R 744 /root/bindaas/bin
-    
- USER fatemeh
  
+ RUN addgroup --gid 1002 fatemeh && \
+    useradd --uid 1002 --gid 1002 fatemeh
+USER fatemeh
+
  WORKDIR /root/bindaas/bin
  
 
