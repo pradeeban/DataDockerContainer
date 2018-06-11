@@ -1,6 +1,6 @@
 # CaMicroscope DATA container
 # DOCKER-VERSION 0.3.4
-# Mongo, Bindass
+# Mongo, Bindaas
 
 # VERSION               0.3.1
 
@@ -50,7 +50,7 @@ EXPOSE 28017
 # Bindaas
 RUN mkdir -p /root/bindaas
 #COPY bindaas.tar.gz /root/bindaas/
-ADD http://imaging.cci.emory.edu/wiki/download/attachments/4915228/bindaas-dist-2.0.2-201603312230-min.tar.gz?version=1&modificationDate=1459806174096&api=v2 /root/bindaas/bindaas.tar.gz
+ADD https://github.com/sharmalab/bindaas/releases/download/2.02RC/bindaas-dist-2.0.2-201603312230-min.tar.gz /root/bindaas/bindaas.tar.gz
 WORKDIR /root/bindaas
 RUN tar -xvf bindaas.tar.gz && rm bindaas.tar.gz
 COPY projects /root/bindaas/bin/projects
