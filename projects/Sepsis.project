@@ -38,7 +38,7 @@
           "description": "  "
         },
         "Sepsisfor4houres": {
-          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : {\"Time\": { \u0027$gte\u0027:$T1$, \u0027$lte\u0027:$T2$}},\n      \"fields\" :{ \"_id\" : 0, patientAccountNumber:1, Sepsis_score:1 }\n   }\n}  ",
+          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : {\"Time\": { \u0027$gte\u0027:$T1$, \u0027$lte\u0027:$T2$}},\n      \"fields\" :{ \"_id\" : 0, patientAccountNumber:1,Time:1 ,Sepsis_score:1 }\n   }\n}  ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
@@ -161,7 +161,7 @@
           "description": "          "
         },
         "findAllTime": {
-          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"Time\": { \u0027$gte\u0027:$T1$, \u0027$lte\u0027:$T2$}, \"Sepsis_score\" : { $gte:$SepsisThreshold$} },\n      \"fields\" :{ \"_id\" : 0, patientAccountNumber:1, bedIdentifier:1, Sepsis_score:1, Sepsis_top_causes:1, Time:1, firstName:1, lastName:1, Threshold_Time:1 , Delta_Sepsis_Score:1 }\n   }\n}  ",
+          "queryTemplate": "{\n   \"_operation\" : \"find\" ,\n   \"_operation_args\" : {\n      \"query\" : { \"Time\": { \u0027$gte\u0027:$T1$, \u0027$lte\u0027:$T2$}, \"Sepsis_score\" : { $gte:$SepsisThreshold$} },\n      \"fields\" :{ \"_id\" : 0, patientAccountNumber:1, bedIdentifier:1, Sepsis_score:1, Sepsis_top_causes:1, Time:1, firstName:1, lastName:1, Threshold_Time:1 , Delta_Sepsis_Score:1, Mortality_Score:1 }\n   }\n}  ",
           "metaData": {},
           "tags": [],
           "bindVariables": {
