@@ -25,7 +25,7 @@ ENV PATH /root/src/jre1.8.0_171/bin:$PATH
 #RUN apt-get install -y upstart
 RUN echo "deb http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 RUN  apt-get update
-RUN apt-get install -y mongodb-org
+RUN apt-get install -y mongodb-org --force-yes
 
 
 # Define mountable directories.
