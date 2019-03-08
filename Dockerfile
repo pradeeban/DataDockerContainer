@@ -16,7 +16,7 @@ RUN apt-get install -q -y libcurl3
 RUN mkdir /root/src
 
 WORKDIR /root/src
-RUN sudo apt-get install -y openjdk-8-jre
+RUN apt-get install -y openjdk-8-jre
 # Add java to path
 
 ENV PATH /root/src/jre1.8.0_171/bin:$PATH
