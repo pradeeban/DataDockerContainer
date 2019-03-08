@@ -6,7 +6,7 @@
 
 ## For the Bindaas User: Running the Docker Container
 
-$ docker run --name bindaas-mongo -v $PWD/bin:/root/bindaas/bin/ -v $PWD/bundles:/root/bindaas/bundles/ -v $PWD/log:/root/bindaas/log/ -p 9099:9099 pradeeban/bindaas:3.3.5
+$ docker run --name bindaas-mongo -v $PWD/bin:/root/bindaas/bin/ -v $PWD/log:/root/bindaas/log/ -p 9099:9099 pradeeban/bindaas:3.3.5withMongo
 
 
 ## For the Bindaas Developer: Building the Docker Container
