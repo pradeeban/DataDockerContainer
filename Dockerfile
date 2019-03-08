@@ -23,6 +23,10 @@ ENV PATH /root/src/jre1.8.0_171/bin:$PATH
  
 # Install MongoDB.
 #RUN apt-get install -y upstart
+sudo rm /etc/apt/sources.list.d/mongodb*.list
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E52529D4
+
 RUN echo "deb http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 RUN  apt-get update
 RUN apt-get install -y mongodb-org --force-yes
