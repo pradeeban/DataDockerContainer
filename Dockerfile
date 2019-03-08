@@ -44,7 +44,6 @@ RUN tar -xvf bindaas.tar.gz && rm bindaas.tar.gz
 COPY projects /root/bindaas/bin/projects
 
 COPY bindaas.config.json /root/bindaas/bin/
-COPY trusted-applications.config.json /root/bindaas/bin/trusted-applications.config.json
 
 EXPOSE 9099
 
