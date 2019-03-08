@@ -1,7 +1,6 @@
-# Camicroscope Data container [![Build Status](https://travis-ci.org/camicroscope/DataDockerContainer.svg?branch=master)](https://travis-ci.org/camicroscope/DataDockerContainer)
+# Bindaas-Mongo Integrated Container
 
 * Installs Mongo
 * Installs Bindaas
-* Uses `.project` files for Bindaas
 
 
