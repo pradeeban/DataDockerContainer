@@ -41,32 +41,22 @@ WORKDIR /data
 
 # Bindaas
 RUN mkdir -p /root/bindaas
-#COPY bindaas.tar.gz /root/bindaas/
+
 ADD https://github.com/sharmalab/bindaas/releases/download/v3.3.5/bindaas-dist-3.3.5.tar.gz /root/bindaas/bindaas.tar.gz
 WORKDIR /root/bindaas
 RUN tar -xvf bindaas.tar.gz && rm bindaas.tar.gz
 COPY projects /root/bindaas/bin/projects
-#COPY Camicroscope_DataLoader.project /root/bindaas/bin/projects/Camicroscope_DataLoader.project
-#COPY Camicroscope_Annotations.project /root/bindaas/bin/projects/Camicroscope_Annotations.project
+
 COPY bindaas.config.json /root/bindaas/bin/
 COPY trusted-applications.config.json /root/bindaas/bin/trusted-applications.config.json
 
 EXPOSE 9099
 
 WORKDIR /root/bindaas/bin
-COPY scripts/db_index.js /root/bindaas/bin/db_index.js
-#WORKDIR /root/scripts
+
 COPY /run.sh /root/bindaas/bin/run.sh
 
-
-
-#pre-load Camicroscope Template document
-COPY /loadCamicroscopeTemplate.js /root/bindaas/bin/loadCamicroscopeTemplate.js
-
-#pre-load admin credential document
-COPY /load_admin_info.js /root/bindaas/bin/load_admin_info.js
-
 COPY mongod.conf /etc/mongod.conf
-#WORKDIR /root/
+
 
 CMD ["sh", "run.sh"]
