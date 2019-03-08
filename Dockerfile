@@ -1,8 +1,4 @@
-# CaMicroscope DATA container
-# DOCKER-VERSION 0.3.4
-# Mongo, Bindaas
-
-# VERSION               0.3.1
+# Mongo, Bindaas Integrated Container
 
 FROM     ubuntu:18.04
 LABEL maintainer="ashish@dbmi.emory.edu"
