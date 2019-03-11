@@ -15,9 +15,9 @@ $ docker run --name bindaas-mongo -e TZ=America/New_York -v $PWD/projects:/root/
 
 From the root directory,
 
-$ docker build -t bindaas:3.3.6withMongo .
+$ docker build -t bindaas:3.3.5withMongo .
 
-You will get the output "Successfully tagged bindaas:3.3.6withMongo" if everything went fine.
+You will get the output "Successfully tagged bindaas:3.3.5withMongo" if everything went fine.
 
 
 Confirm that by running
@@ -26,13 +26,13 @@ $ docker image ls
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 
-bindaas             3.3.6withMongo              a9a81d677bb2        5 minutes ago        59MB
+bindaas             3.3.5withMongo              a9a81d677bb2        5 minutes ago        59MB
 
 
 
 ### Tag the image with the user name:
  
- $ docker tag bindaas:3.3.6withMongo pradeeban/bindaas:3.3.6withMongo
+ $ docker tag bindaas:3.3.5withMongo pradeeban/bindaas:3.3.5withMongo
 
 
  ### Log in and push the image to the Docker repository:
@@ -41,4 +41,5 @@ Before committing, make sure Bindaas runs fine in the container using the comman
 
  $ docker login
 
- $ **docker push pradeeban/bindaas:3.3.6withMongo**
+ $ **docker push pradeeban/bindaas:3.3.5withMongo**
+
