@@ -41,15 +41,12 @@ RUN tar -xvf bindaas.tar.gz && rm bindaas.tar.gz
 COPY projects /root/bindaas/bin/projects
 
 COPY bindaas.config.json /root/bindaas/bin/
-#COPY log/bindaas.log /root/bindaas/log/
 
 COPY /run.sh /root/bindaas/bin/run.sh
 
 COPY mongod.conf /etc/mongod.conf
 
 RUN chown -R bindaas:bindaas /root/
-#RUN chown -R bindaas:bindaas /root/bindaas/
-#RUN chown -R bindaas:bindaas /root/bindaas/log/
 RUN chown -R bindaas:bindaas /var/log/mongodb/
 RUN chown -R bindaas:bindaas /var/lib/mongodb/
 
