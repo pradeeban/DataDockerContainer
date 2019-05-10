@@ -35,7 +35,7 @@ RUN apt-get install -y mongodb-org --allow-change-held-packages
 # Bindaas
 RUN mkdir -p /root/bindaas
 
-ADD https://github.com/sharmalab/bindaas/releases/download/v3.3.8/bindaas-dist-3.3.8.tar.gz /root/bindaas/bindaas.tar.gz
+ADD https://github.com/sharmalab/bindaas/releases/download/v3.4.1/bindaas-dist-3.4.1.tar.gz /root/bindaas/bindaas.tar.gz
 WORKDIR /root/bindaas
 RUN tar -xvf bindaas.tar.gz && rm bindaas.tar.gz
 COPY projects /root/bindaas/bin/projects
